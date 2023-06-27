@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/susdas_quay_org/e2e-demos-lyan-tenant/e2e-nodejs/nodejs-health-check@sha256:c42a170d72fafdac95d1920574b57904bcc7bf569ef76bee15fff0b2100b1310
+        name: my-nodejs
+        resources: {}
+status: {}
